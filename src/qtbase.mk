@@ -44,24 +44,17 @@ define $(PKG)_BUILD
             -static \
             -prefix '$(PREFIX)/$(TARGET)/qt5' \
             -no-icu \
-            -opengl desktop \
+            -no-opengl \
             -no-glib \
             -accessibility \
             -nomake examples \
             -nomake tests \
-            -plugin-sql-mysql \
-            -mysql_config $(PREFIX)/$(TARGET)/bin/mysql_config \
-            -plugin-sql-sqlite \
-            -plugin-sql-odbc \
-            -plugin-sql-psql \
-            -plugin-sql-tds -D Q_USE_SYBASE \
             -system-zlib \
             -system-libpng \
             -system-libjpeg \
-            -system-sqlite \
-            -fontconfig \
-            -system-freetype \
-            -system-harfbuzz \
+            -no-fontconfig \
+            -no-freetype \
+            -no-harfbuzz \
             -system-pcre \
             -openssl-linked \
             -dbus-linked \

@@ -27,7 +27,7 @@ define $(PKG)_BUILD
 
     cd '$(1)' && CC='$(TARGET)-gcc' RC='$(TARGET)-windres' ./Configure \
         @openssl-target@ \
-        zlib \
+        no-zlib \
         $(if $(BUILD_STATIC),no-,)shared \
         no-capieng \
         --prefix='$(PREFIX)/$(TARGET)'
